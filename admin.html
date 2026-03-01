@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COD Store Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <h1>Admin Panel</h1>
+      <a href="index.html" class="admin-link">Back to Store</a>
+    </div>
+  </header>
+
+  <main class="container admin-layout">
+    <section id="login-panel" class="card">
+      <h2>Admin Login</h2>
+      <p class="muted">Use password: <strong>admin123</strong></p>
+      <form id="login-form" class="stack">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required />
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p id="login-error" class="error" role="alert"></p>
+    </section>
+
+    <section id="admin-panel" class="card hidden">
+      <h2>Manage Products</h2>
+      <form id="product-form" class="stack">
+        <label for="name">Product Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="price">Price</label>
+        <input id="price" name="price" type="number" min="1" step="1" required />
+
+        <label for="image">Image URL</label>
+        <input id="image" name="image" type="url" placeholder="https://..." required />
+
+        <button type="submit" class="btn">Add Product</button>
+      </form>
+
+      <h3>Current Products</h3>
+      <ul id="admin-product-list" class="admin-product-list"></ul>
+      <button id="logout-btn" class="btn secondary">Logout</button>
+    </section>
+  </main>
+
+  <script src="admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COD Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <h1>COD Online Store</h1>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <section class="products-section">
+      <h2>Products</h2>
+      <div id="products" class="products-grid" aria-live="polite"></div>
+    </section>
+
+    <aside class="cart-section">
+      <h2>Your Cart</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-summary">
+        <p>Total: <strong id="cart-total">$0</strong></p>
+        <button id="checkout-btn" class="btn checkout-btn">Checkout on WhatsApp</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
